@@ -6,3 +6,8 @@ This repository contains the source codes developed and implemented in the accom
 
 The proposed framework incorporates heterogeneous initial GND distributions induced by martensitic transformation into subsequent mechanical simulations, enabling a quantitative assessment of the coupled effects of crystallographic texture, transformation-induced residual deformation, and martensite morphology on local deformation and damage evolution.
 
+Code: 
+umat2phase.f - the main user-defined material subroutine (UMAT) implementing the constitutive framework for dual-phase (DP) steels in Abaqus. The framework combines crystal plasticity (CP) for the ferrite phase with J2 isotropic plasticity for the martensite phase. The effects of transformation-induced geometrically necessary dislocations (GNDs) are incorporated through an additional thermal strain field representing the volumetric expansion associated with martensitic transformation. Phase-field damage evolution, coupled with the modified Mohr–Coulomb (MMC) failure criterion, is implemented through the HETVAL user subroutine to account for stress triaxiality- and Lode-parameter-dependent fracture behavior.
+mod_alloys.f defines and updates the crystallographic and material parameters of the ferrite phase used in the crystal plasticity model. 
+
+umat_matj2.f - a user-defined material subroutine (UMAT) implementing J2 isotropic plasticity for both ferrite and martensite phases in dual-phase (DP) steels to facilitate the calibration of crystal plasticity (CP) parameters for ferrite against experimental mechanical responses.

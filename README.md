@@ -11,3 +11,10 @@ umat2phase.f - the main user-defined material subroutine (UMAT) implementing the
 mod_alloys.f defines and updates the crystallographic and material parameters of the ferrite phase used in the crystal plasticity model. 
 
 umat_matj2.f - a user-defined material subroutine (UMAT) implementing J2 isotropic plasticity for both ferrite and martensite phases in dual-phase (DP) steels to facilitate the calibration of crystal plasticity (CP) parameters for ferrite against experimental mechanical responses.
+
+Data: 
+TensileRaw.xlsx - the experimental tensile test data for dual-phase (DP) steels with fibrous and coarse martensite morphologies. These datasets are used to calibrate and validate the corresponding finite element simulations by comparing experimentally measured and numerically predicted stress–strain responses, ensuring that the constitutive models accurately reproduce the macroscopic mechanical behavior of both microstructures.
+
+Inp:
+The Abaqus input files (.inp) generated from electron backscatter diffraction (EBSD) data for dual-phase (DP) steels with fibrous and coarse martensite morphologies. These files are used to perform finite element simulations under different ferritic crystallographic texture configurations.
+
